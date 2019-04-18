@@ -1,0 +1,16 @@
+var watchFr={
+  getWatch:function(n){
+    if(!n) return 0;
+    if(n>=1000){
+      n=(n/1000).toFixed(1);
+      n=n+'k';
+      return n;
+    }else{
+      return n;
+    }
+  }
+}
+
+module.exports={
+  getWatch:watchFr.getWatch
+}

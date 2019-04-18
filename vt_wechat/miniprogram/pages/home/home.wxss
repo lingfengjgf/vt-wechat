@@ -1,0 +1,134 @@
+/* miniprogram/pages/home/home.wxss */
+.container{
+  background: #f0f0f0;
+}
+/* 轮播图 */
+.slider,.slider swiper,.slider image{
+  height: 300rpx;
+  width: 100%;
+}
+
+/* 导航栏 */
+.index-nav{
+  padding: 20rpx 0 15rpx;
+  background: #fff;
+  display: flex;
+  width: 100%;
+}
+.nav-item{
+  width: 25%;
+  height: 130rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 16px;
+}
+.nav-item image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.content{
+  margin: 20rpx 0;
+}
+/* 1楼出版图书 */
+.title{
+  width: 100%;
+  text-align: left;
+  padding: 20rpx 30rpx;
+  background: #fff;
+}
+.show{
+  padding: 0 20rpx;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.show>.show-item{
+  width: 33.33%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.show>.show-item>image{
+  width: 200rpx;
+  height: 280rpx;
+  border:1px solid #0083ec;
+}
+.show>.show-item>text{
+  display: block;
+  text-align: center;
+  width: 200rpx;
+  font-size: 16px;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.rank{
+  margin-bottom: 20rpx;
+}
+.rank>.title{
+  margin-top: 20rpx;
+  display: flex; 
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.rank>.title>.more{
+  font-size: 16px;
+  color: #0083ec;
+}
+.rank>.book{
+  display: flex;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  border-top: 1px solid #888;
+  justify-content: space-between;
+}
+.rank>.book>view.img{
+  width: 25%;
+}
+.rank>.book>view.infor{
+  width: 70%;
+  font-size: 14px;
+}
+.rank>.book>view.img>image{
+  width: 180rpx;
+  height: 260rpx;
+  box-shadow: 3px 3px 8px #444;
+}
+.rank>.book>.infor>.title{
+  font-size: 18px;
+  padding: 0;
+  margin-bottom: 10rpx;
+}
+.rank>.book>.infor>.intro{
+  width: 100%;
+  height: 155rpx;
+  color: #444;
+  display: -webkit-box;
+  overflow: hidden; /*隐藏溢出的文本  */
+  text-overflow: ellipsis;
+  word-break: break-all;/*自动换行*/
+  -moz-box-orient: vertical; /*从上到下自动排列子元素*/
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp:4; /*显示的行数*/
+}
+.rank>.book>.infor>.floor{
+  display: flex;
+  margin-top: 10rpx;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.rank>.book>.infor>.floor>.author{
+  color: #888;
+}
+.rank>.book>.infor>.floor>.watch{
+  color: rgb(244,88,88);
+  border: 1px solid rgb(244,88,88);
+  border-radius: 5%;
+  padding: 0 5rpx;
+}

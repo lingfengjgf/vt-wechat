@@ -1,0 +1,59 @@
+/* miniprogram/pages/free/free.wxss */
+.book{
+  display: flex;
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.book>image{
+  width: 160rpx;
+  height: 240rpx;
+}
+.book>.infor{
+  width: 75%;
+  font-size: 16px;
+  padding-left: 10rpx;
+}
+.book>.infor>.intro{
+  width: 100%;
+  height: 150rpx;
+  margin: 10rpx 0;
+  color: #444;
+  font-size: 14px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp:4;
+}
+.book>.infor>.floor{
+  display: flex;
+  justify-content: space-between;
+}
+.book>.infor>.floor>.author{
+  font-size: 14px;
+  color: #0083ec;
+  width: 220rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.book>.infor>.floor>.label>text{
+  color: #888;
+  font-size: 12px;
+  border: 1px solid #888;
+  border-radius: 5%;
+  padding: 0 5rpx;
+}
+.book>.infor>.floor>.label>text.words{
+  color: rgb(244,88,88);
+  border-color: rgb(244,88,88);
+  margin-left: 20rpx;  
+}
+.foot{
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}

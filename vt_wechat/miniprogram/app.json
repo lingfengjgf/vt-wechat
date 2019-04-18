@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/home/home",
+    "pages/free/free",
+    "pages/rank/rank",
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/bookshelf/bookshelf",
+    "pages/pay/pay",
+    "pages/person/person"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0083ec",
+    "navigationBarTitleText": "观品",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "pages/icon/home.png",
+        "selectedIconPath": "pages/icon/home_show.png"
+      },
+      {
+        "pagePath": "pages/bookshelf/bookshelf",
+        "text": "书架",
+        "iconPath": "pages/icon/bookshelf.png",
+        "selectedIconPath": "pages/icon/bookshelf_show.png"
+      },
+      {
+        "pagePath": "pages/pay/pay",
+        "text": "充值",
+        "iconPath": "pages/icon/pay.png",
+        "selectedIconPath": "pages/icon/pay_show.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "pages/icon/person.png",
+        "selectedIconPath": "pages/icon/person_show.png"
+      }
+    ]
+  }
+}

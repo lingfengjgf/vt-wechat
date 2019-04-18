@@ -1,0 +1,123 @@
+<wxs module='watchFr' src='../filter/watch.wxs' />
+<view class='container'>
+  <!-- 轮播图 -->
+  <view class='slider'>
+    <swiper autoplay='2500' circular='true' indicator-dots='true' indicator-active-color='#0083ec' indicator-color='#f0f0f0'>
+      <swiper-item wx:for='{{casel}}' wx:key='index'>
+        <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航栏 -->
+  <view class="index-nav">
+    <view class='nav-item' bindtap='goClassify'>
+      <image src='../icon/classify.png' lazy-load='true' mode='aspectFill'></image>
+      <text>分类</text>
+    </view>
+    <view class='nav-item' bindtap='goRank'>
+      <image src='../icon/rank.png' lazy-load='true' mode='aspectFill'></image>
+      <text>排行</text>
+    </view>
+    <view class='nav-item' bindtap='goFree'>
+      <image src='../icon/free.png' lazy-load='true' mode='aspectFill'></image>
+      <text>免费</text>
+    </view>
+    <view class='nav-item'>
+      <image src='../icon/search.png' lazy-load='true' mode='aspectFill'></image>
+      <text>搜索</text>
+    </view>
+  </view>
+  <!-- 图书信息 -->
+  <view class='content'>
+    <!-- 1楼出版图书 -->
+    <view class='title'>
+      <text>出版图书</text>
+    </view>
+    <view class='show'>
+      <view wx:for='{{pubBooks}}' wx:key='index' class='show-item'>
+        <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    <!-- 观品热销 -->
+    <view class='rank'>
+      <view class='title'>
+        <text>观品热销</text>
+        <text class='more'>查看更多>></text>
+      </view>
+      <view class='book' wx:for='{{bests}}' wx:key='index'>
+        <view class='img'>
+          <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+        </view>
+        <view class='infor'>
+          <view class='title'>{{item.title}}</view>
+          <text class='intro'>{{item.intro}}</text>
+          <view class='floor'>
+            <text class='author'>{{item.author}}</text>
+            <text class='watch'>{{watchFr.getWatch(item.watch)}}人看过</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 2楼经典著作 -->
+    <view class='title'>
+      <text>经典著作</text>
+    </view>
+    <view class='show'>
+      <view wx:for='{{pubBooks}}' wx:key='index' class='show-item'>
+        <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    <!-- 新书上架 -->
+    <view class='rank'>
+      <view class='title'>
+        <text>新书上架</text>
+        <text class='more'>查看更多>></text>
+      </view>
+      <view class='book' wx:for='{{news}}' wx:key='index'>
+        <view class='img'>
+          <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+        </view>
+        <view class='infor'>
+          <view class='title'>{{item.title}}</view>
+          <text class='intro'>{{item.intro}}</text>
+          <view class='floor'>
+            <text class='author'>{{item.author}}</text>
+            <text class='watch'>{{item.watch}}人看过</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 3楼国外名著 -->
+    <view class='title'>
+      <text>国外名著</text>
+    </view>
+    <view class='show'>
+      <view wx:for='{{pubBooks}}' wx:key='index' class='show-item'>
+        <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+    <!-- 编辑推荐 -->
+    <view class='rank'>
+      <view class='title'>
+        <text>编辑推荐</text>
+        <text class='more'>查看更多>></text>
+      </view>
+      <view class='book' wx:for='{{recs}}' wx:key='index'>
+        <view class='img'>
+          <image src='http://localhost:3000{{item.pic}}' lazy-load='true' mode='aspectFill'></image>
+        </view>
+        <view class='infor'>
+          <view class='title'>{{item.title}}</view>
+          <text class='intro'>{{item.intro}}</text>
+          <view class='floor'>
+            <text class='author'>{{item.author}}</text>
+            <text class='watch'>{{item.watch}}人看过</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

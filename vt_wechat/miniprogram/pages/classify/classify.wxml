@@ -1,0 +1,28 @@
+<!--miniprogram/pages/classify/classify.wxml-->
+<!-- 频道 -->
+<view class='container'>
+  <view class='classify'>
+    <view class='title'>
+    —— <text>频道</text> ——
+    </view>
+    <view class='tags'>
+      <text wx:for='{{chas}}' wx:key='index'>{{item.label}}</text>
+    </view>
+  </view>
+  <view class='classify'>
+    <view class='title gens'>
+    —— <text>类型</text> ——
+    </view>
+    <view class='tags'>
+      <text wx:for='{{gens}}' wx:key='index'>{{item.label}}</text>
+    </view>
+  </view>
+  <view class='classify'>
+    <view class='title oths'>
+    —— <text>其它</text> ——
+    </view>
+    <view class='tags'>
+      <text wx:for='{{oths}}' wx:key='index'>{{item.label}}</text>
+    </view>
+  </view>
+</view>

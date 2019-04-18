@@ -1,0 +1,18 @@
+<!--miniprogram/pages/free/free.wxml-->
+<view class='container'>
+  <view class='book' wx:for='{{books}}' wx:key='index'>
+    <image src='http://localhost:3000{{item.pic}}'></image>
+    <view class='infor'>
+      <view class='title'>{{item.title}}</view>
+      <view class='intro'>{{item.intro}}</view>
+      <view class='floor'>
+        <view class='author'>{{item.author}}</view>
+        <view class='label'>
+          <text>{{item.label}}</text>
+          <text class='words'>{{item.words}}万字</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='foot'>到底了~</view>
+</view>

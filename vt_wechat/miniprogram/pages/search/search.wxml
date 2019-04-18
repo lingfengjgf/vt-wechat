@@ -1,0 +1,17 @@
+<!--miniprogram/pages/search/search.wxml-->
+<view class='container'>
+  <view class='search'>
+    <input placeholder='请输入书名、分类名或作者名' auto-focus='true' focus='true'></input>
+    <view>搜索</view>
+  </view>
+  <view class='top'>
+    <text>热门搜索</text>
+    <view class='change' bindtap='change'>
+      <image animation="{{changeData}}" src='../icon/change.png'></image>
+      <text>换一换</text>
+    </view>
+  </view>
+  <view class='tags'>
+    <text wx:for='{{tags}}' wx:key='index' style='background-color:{{ramColor[index]}}'>{{item}}</text>
+  </view>
+</view>

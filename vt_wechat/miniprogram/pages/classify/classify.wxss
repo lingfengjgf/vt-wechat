@@ -1,0 +1,39 @@
+/* miniprogram/pages/classify/classify.wxss */
+.container{
+  background: #f0f0f0;
+}
+.classify{
+  padding: 10rpx 30rpx ;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+.classify+.classify{
+  margin-top: 20rpx;
+}
+.classify>.title{
+  margin-top: 20rpx;
+  color: #bbb;
+}
+.classify>.title>text{
+  color: #0083ec;
+}
+.classify>.title.gens>text{
+  color: rgb(244,88,88);
+}
+.classify>.tags{
+  padding: 50rpx 50rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.classify>.tags>text{
+  width: 33.33%;
+  margin-bottom: 50rpx;
+  border-right: 1px solid #bbb;
+  box-sizing: border-box;
+}
+.classify>.tags>text:nth-child(3n){
+  border: 0;
+}

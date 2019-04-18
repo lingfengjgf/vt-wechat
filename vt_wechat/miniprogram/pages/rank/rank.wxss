@@ -1,0 +1,120 @@
+/* miniprogram/pages/rank/rank.wxss */
+.container{
+  min-height: 100vh;
+}
+.nav-top{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 50rpx;
+  box-sizing:border-box;
+  background: #fff;
+  box-shadow: 0 2px 15px #888;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.nav-top>text{
+  padding-bottom: 10rpx;
+}
+.nav-top>text.show{
+  color: rgb(244, 88, 88);
+  border-bottom: 2px solid rgb(244, 88, 88);
+}
+.nav-left{
+  position: fixed;
+  top: 107rpx;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+}
+.nav-left>text{
+  padding: 20rpx;
+  text-align: center;
+  font-size: 16px;
+}
+.nav-left>text.show{
+  background: #fff;
+  font-size: 18px;
+  border-left: 2px solid rgb(244, 88, 88);
+}
+.rank{
+  width: 70%;
+  margin-top: 107rpx;
+  margin-left: 28%;
+}
+.book{
+  display: flex;
+  padding: 20rpx 10rpx;
+  align-items: center;
+  background: #fff;
+}
+.book+.book{
+  margin-top: 10rpx;
+}
+.book>text{
+  width: 40rpx;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 10rpx;
+}
+.book>text.first{
+  background: rgb(244, 22, 0);
+  border-radius: 50%;
+}
+.book>text.sec{
+  background: rgb(244, 88, 0);
+  border-radius: 50%;
+}
+.book>text.tir{
+  background: rgb(244, 140, 0);
+  border-radius: 50%;
+}
+.book>.content{
+  display: flex;
+}
+.book>.content>image{
+  width: 120rpx;
+  height: 160rpx;
+}
+.book>.content>.infor{
+  margin-left: 10rpx;
+  font-size: 16px;
+}
+.book>.content>.infor>view+view{
+  margin-top: 20rpx;
+}
+.book>.content>.infor>.title{
+  width: 300rpx;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.book>.content>.infor>.author{
+  width: 300rpx;
+  font-size: 14px;
+  color: #666;
+  overflow:hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.book>.content>.infor>.floor{
+  display: flex;
+  justify-content: space-between;
+}
+.book>.content>.infor>.floor>.tag{
+  font-size: 12px;
+  color: rgb(244,88,88);
+  border: 1px solid rgb(244,88,88);
+  border-radius: 5%;
+  padding: 0 5rpx;
+}
+.book>.content>.infor>.floor>.watch{
+  font-size: 12px;
+  color: #888;
+  border: 1px solid #888;
+  border-radius: 5%;
+  padding: 0 5rpx;
+}
