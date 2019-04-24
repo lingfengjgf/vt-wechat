@@ -1,0 +1,50 @@
+/* miniprogram/pages/detail/detail.wxss */
+.top{
+  display: flex;
+  padding: 20rpx;
+}
+.top>.left{
+  width: 60%;
+  padding-left: 25rpx;
+}
+.top>.left>.title{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.top>.left>view{
+  margin-bottom: 25rpx;
+}
+.top>.left>view>text{
+  color: #666;
+  font-size: 16px;
+}
+.top>.left>view.tags{
+  display: flex;
+  font-size: 14px;
+}
+.top>.left>view.tags>view{
+  color: rgb(244,88,88);
+  border: 1px solid rgb(244,88,88);
+  border-radius: 5%;
+  padding: 0 5rpx;
+}
+.top>.left>view.tags>view.watch{
+  margin-left: 20rpx;  
+}
+.top>.left>.price{
+  font-size: 16px;
+}
+.top>.left>.price>text{
+  color: #0083ec;
+  font-size:18px; 
+}
+.top>.right{
+  width: 40%;
+  text-align: center;
+}
+.top>.right>image{
+  width: 200rpx;
+  height: 280rpx;
+}

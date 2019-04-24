@@ -41,6 +41,6 @@
   font-size: 16px;
   padding: 10rpx;
   border-radius: 30rpx;
-  margin: 10rpx 0;
+  margin: 10rpx 10rpx;
   color: #fff;
 }

@@ -1,4 +1,4 @@
-/* miniprogram/pages/free/free.wxss */
+/* miniprogram/pages/list/list.wxss */
 .book{
   display: flex;
   padding: 20rpx;

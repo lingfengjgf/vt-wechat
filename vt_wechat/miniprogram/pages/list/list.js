@@ -1,4 +1,4 @@
-// miniprogram/pages/free/free.js
+// miniprogram/pages/list/list.js
 const app = getApp()
 Page({
 
@@ -6,21 +6,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books:[]
+    books: []
   },
-
+  showTitle:function(title){
+    wx.setNavigationBarTitle({
+      title: title
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //console.log(options.goPath)
+    var goPath = options.goPath;
+    var title='观品';
+    if(goPath=='free'){
+      title='免费专区'
+    }
+    if(goPath=='best'){
+      title='观品热销'
+    }
+    if(goPath=='new'){
+      title='新书上架'
+    }
+    if(goPath=='rec'){
+      title='编辑推荐'
+    }
+    this.showTitle(title)
+    var url = 'http://localhost:3000/wx/' + goPath;
     wx.request({
-      url: 'http://localhost:3000/wx/free',
-      success:(res)=>{
+      url: url,
+      success: (res) => {
         app.spLable(res.data, 1)
         this.setData({
-          books:res.data
+          books: res.data
         })
-        console.log(this.data.books)
       }
     })
   },

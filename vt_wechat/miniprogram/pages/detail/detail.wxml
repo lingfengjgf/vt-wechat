@@ -1,0 +1,23 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<wxs module='watchFr' src='../filter/watch.wxs' />
+<view class='container'>
+  <view class='top'>
+    <view class='left'>
+      <view class='title'>{{book[0].title}}</view>
+      <view>
+        <text class='author'>{{book[0].author}}</text>
+        <text> | </text>
+        <text class='words'>{{book[0].words}}万字</text>
+      </view>
+      <view class='tags'>
+        <view class='label'>{{book[0].label}}</view>
+        <view class='watch'>{{watchFr.getWatch(book[0].watch)}}人看过</view>
+      </view>
+      <view class='price'><text>{{book[0].price}}</text> 书币</view>
+    </view>
+    <view class='right'>
+      <image src='http://localhost:3000{{book[0].pic}}'></image>
+    </view>
+  </view>
+  <view class='intro'>{{book[0].intro}}</view>
+</view>

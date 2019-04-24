@@ -18,11 +18,12 @@
       <image src='../icon/rank.png' lazy-load='true' mode='aspectFill'></image>
       <text>排行</text>
     </view>
-    <view class='nav-item' bindtap='goFree'>
+    <view class='nav-item'>
       <image src='../icon/free.png' lazy-load='true' mode='aspectFill'></image>
       <text>免费</text>
+      <view class='mask' bindtap='goList' data-url='free'></view>
     </view>
-    <view class='nav-item'>
+    <view class='nav-item' bindtap='goSearch'>
       <image src='../icon/search.png' lazy-load='true' mode='aspectFill'></image>
       <text>搜索</text>
     </view>
@@ -43,7 +44,7 @@
     <view class='rank'>
       <view class='title'>
         <text>观品热销</text>
-        <text class='more'>查看更多>></text>
+        <text class='more' bindtap='goList' data-url='best'>查看更多>></text>
       </view>
       <view class='book' wx:for='{{bests}}' wx:key='index'>
         <view class='img'>
@@ -73,7 +74,7 @@
     <view class='rank'>
       <view class='title'>
         <text>新书上架</text>
-        <text class='more'>查看更多>></text>
+        <text class='more' bindtap='goList' data-url='new'>查看更多>></text>
       </view>
       <view class='book' wx:for='{{news}}' wx:key='index'>
         <view class='img'>
@@ -84,7 +85,7 @@
           <text class='intro'>{{item.intro}}</text>
           <view class='floor'>
             <text class='author'>{{item.author}}</text>
-            <text class='watch'>{{item.watch}}人看过</text>
+            <text class='watch'>{{watchFr.getWatch(item.watch)}}人看过</text>
           </view>
         </view>
       </view>
@@ -103,7 +104,7 @@
     <view class='rank'>
       <view class='title'>
         <text>编辑推荐</text>
-        <text class='more'>查看更多>></text>
+        <text class='more' bindtap='goList' data-url='rec'>查看更多>></text>
       </view>
       <view class='book' wx:for='{{recs}}' wx:key='index'>
         <view class='img'>
@@ -114,7 +115,7 @@
           <text class='intro'>{{item.intro}}</text>
           <view class='floor'>
             <text class='author'>{{item.author}}</text>
-            <text class='watch'>{{item.watch}}人看过</text>
+            <text class='watch'>{{watchFr.getWatch(item.watch)}}人看过</text>
           </view>
         </view>
       </view>

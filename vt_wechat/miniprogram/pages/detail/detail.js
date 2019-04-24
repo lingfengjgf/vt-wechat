@@ -1,58 +1,29 @@
-// miniprogram/pages/home/home.js
+// miniprogram/pages/detail/detail.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    casel: [],
-    pubBooks:[],
-    news:[],
-    bests:[],
+    book: [{ pic:'img/book/default.jpg'}],
     recs:[]
   },
 
-  goClassify:function(){
-    wx.navigateTo({
-      url: '../classify/classify'
-    })
-  },
-  goRank:function(){
-    wx.navigateTo({
-      url: '../rank/rank'
-    })
-  },
-  goFree:function(){
-    wx.navigateTo({
-      url: '../free/free'
-    })
-  },
-  goSearch:function(){
-    wx.navigateTo({
-      url: '../search/search'
-    })
-  },
-  goList:function(e){
-    var goPath = e.target.dataset.url
-    wx.navigateTo({
-      url: '../list/list?goPath='+goPath,
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var bid=1
     wx.request({
-      url: 'http://localhost:3000/wx/index',
+      url: 'http://localhost:3000/details?bid='+bid,
       success:(res)=>{
+        app.spLable(res.data.book, 1)
         this.setData({
-          casel:res.data.casel,
-          pubBooks:res.data.pubBooks,
-          bests:res.data.best,
-          news:res.data.new,
-          recs:res.data.rec
+          book: res.data.book,
+          recs: res.data.recommend
         })
-        //console.log(this.data.news);
+        console.log(this.data.book)
       }
     })
   },

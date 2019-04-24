@@ -40,18 +40,21 @@ Page({
         })
 
       }, 800)
+      this.getTag();
     }
   },
   getTag:function(){
-    var allTags = this.data.allTags,tags=[];
+    var nowTags = [],tags=[];
+    nowTags = JSON.parse(JSON.stringify(this.data.allTags));
     for (var i = 0; i < 9; i++) {
-      var len=allTags.length;
+      var len = nowTags.length;
       var index = Math.floor(Math.random()*len)
-      tags.push(allTags[index]);
-      //allTags.splice(index,1);
+      tags.push(nowTags[index]);
+      nowTags.splice(index,1);
       //console.log(allTags)
     }
-    //console.log(allTags)
+    this.setData({tags})
+    this.getColor();
   },
   getColor:function(){
     var cLen=this.data.colorArr.length;
@@ -77,12 +80,12 @@ Page({
         app.spLable(res.data.label,1);
         app.getTags(allTags, res.data.label,'label');
         var allTag = new Set(allTags)
-        console.log(allTag)
+        allTags = [...allTag]
+        //console.log(allTags)
         this.setData({allTags})
         this.getTag()
       }
     })
-    this.getColor();
   },
 
   /**
